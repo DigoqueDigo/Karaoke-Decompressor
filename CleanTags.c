@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 #include "CleanTags.h"
 
 
@@ -22,7 +23,7 @@ int found_next(char *string, int x){
 
 void remove_tag(char *string, int start, int end){
     int dif = end-start+1;
-    for (; string[start+dif] != '\0' && string[start+dif] != '\n' ;start++){
+    for (; string[start+dif] != '\0' && string[start+dif] != '\n'; start++){
         string[start] = string[start+dif];
     }
     string[start] = '\0';
@@ -35,5 +36,39 @@ void clean_string(char *string){
         x = found_indice(string);
         y = found_next(string,x);
         remove_tag(string,x,y);
+    }
+}
+
+
+int string_to_int (char *string){
+    int acc = 0, n = strlen(string)-1;
+    for (int p = 0; string[p] != '\0'; p++, n--){
+        int aux = string[p] - '0';
+        acc += aux * pow(10,n); 
+    }
+    return acc;
+}
+
+
+void copy_times_from_tag(char *string, int start, int end, int times[], int *N){
+    char tempo[5], aux[1000];
+    int p = 0, acc;
+    for (start = start+3; start != end; start++, p++){
+        tempo[p] = string[start];
+    }
+    tempo[p] = '\0';
+    acc = string_to_int(tempo);
+    times[*N] = acc;
+    ++*N;
+    strcpy(aux,&(string[end+1]));
+    strcpy(string,aux);
+}
+
+
+void copy_all_times(char *string, int times[], int *N){
+    while(found_indice(string) != -1){
+        int inicio = found_indice(string);
+        int fim = found_next(string,inicio);
+        copy_times_from_tag(string,inicio,fim,times,N);
     }
 }

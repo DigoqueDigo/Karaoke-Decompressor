@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "CleanTags.h"
 
-// Retorn -1 quando a string acaba, caso contrário retorna o incidice do char '{'
 
 int found_indice(char *string){
     int p;
@@ -13,7 +13,6 @@ int found_indice(char *string){
     return p;
 }
 
-// Esta função apenas será chamada no caso de a 'found_indice' der match
 
 int found_next(char *string, int x){
     int n = x+1;
@@ -40,15 +39,3 @@ void clean_string(char *string){
         remove_tag(string,x,y);
     }
 }
-
-
-int main(){
-    char string[100] = " {\\k8889} ola{\\k3} ol{\\k3}a";
-    printf("%s\n", string);
-    clean_string(string);
-    printf("->%s<-\n", string);
-    return 0;
-}
-
-
-

@@ -9,7 +9,6 @@ int found_indice(char *string){
     for (p = 0; string[p] != '{'; p++){
         if (string[p] == '\n' || string[p] == '\0') return -1; 
     }
-//    printf("inicio -> %d\n", p);
     return p;
 }
 
@@ -17,7 +16,6 @@ int found_indice(char *string){
 int found_next(char *string, int x){
     int n = x+1;
     for (; string[n] != '}'; n++);
-//    printf("fim -> %d\n", n);
     return n;
 }
 

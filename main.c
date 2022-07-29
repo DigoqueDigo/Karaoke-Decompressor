@@ -20,7 +20,7 @@ int main(){
     
     *N = 0;*/
     if (fgets(string, 1000, stdin) != NULL){
-        final_clean(string);
+        clean_string(string);
         printf("->%s<-\n", string);
     }
     

@@ -20,7 +20,7 @@ int found_next(char *string, int x){
     return n;
 }
 
-
+/*
 void remove_tag(char *string, int start, int end){
     int dif = end-start+1;
     for (; string[start+dif] != '\0' && string[start+dif] != '\n'; start++){
@@ -38,7 +38,7 @@ void clean_string(char *string){
         remove_tag(string,x,y);
     }
 }
-
+*/
 
 void puxa_atras(char *string, int inicio){
     for (; string[inicio] != '\0'; inicio++){
@@ -47,14 +47,24 @@ void puxa_atras(char *string, int inicio){
     string[inicio] = '\0';
 }
 
-void final_clean(char *string){
-    clean_string(string);
+
+void clean_string(char *string){
+    int p;
     for (int acc = 0; acc < 9;){
         if (string[0] == ',') acc++;
         puxa_atras(string,0);
     }
+    for (p = 0; string[p] != '\n' && string[p] != '\0';){
+        if (string[p] == '{'){
+            while (string[p] != '}'){
+                puxa_atras(string,p);
+            }
+            puxa_atras(string,p);
+        }
+        else p++;
+    }
+    string[p] = '\0';
 }
-
 
 
 // Tempos
@@ -92,5 +102,3 @@ void copy_all_times(char *string, int times[], int *N){
         copy_times_from_tag(string,inicio,fim,times,N);
     }
 }
-
-

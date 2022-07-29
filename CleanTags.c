@@ -5,6 +5,8 @@
 #include "CleanTags.h"
 
 
+// Encontrar a string original
+
 int found_indice(char *string){
     int p;
     for (p = 0; string[p] != '{'; p++){
@@ -13,32 +15,11 @@ int found_indice(char *string){
     return p;
 }
 
-
 int found_next(char *string, int x){
     int n = x+1;
     for (; string[n] != '}'; n++);
     return n;
 }
-
-/*
-void remove_tag(char *string, int start, int end){
-    int dif = end-start+1;
-    for (; string[start+dif] != '\0' && string[start+dif] != '\n'; start++){
-        string[start] = string[start+dif];
-    }
-    string[start] = '\0';
-}
-
-
-void clean_string(char *string){
-    int x, y;
-    while (found_indice(string) != -1){
-        x = found_indice(string);
-        y = found_next(string,x);
-        remove_tag(string,x,y);
-    }
-}
-*/
 
 void puxa_atras(char *string, int inicio){
     for (; string[inicio] != '\0'; inicio++){
@@ -47,13 +28,17 @@ void puxa_atras(char *string, int inicio){
     string[inicio] = '\0';
 }
 
+void remove_dialogue(char *string){
+    for (int p = 0; p < 9;){
+        if (string[0] == ',') p++;
+        puxa_atras(string,0);
+    }
+}
+
 
 void clean_string(char *string){
     int p;
-    for (int acc = 0; acc < 9;){
-        if (string[0] == ',') acc++;
-        puxa_atras(string,0);
-    }
+    remove_dialogue(string);
     for (p = 0; string[p] != '\n' && string[p] != '\0';){
         if (string[p] == '{'){
             while (string[p] != '}'){
@@ -67,7 +52,44 @@ void clean_string(char *string){
 }
 
 
-// Tempos
+// Inserir uma tag numa string, retorna 1 se a operação foi bem sucedida
+
+int insere_tag(char *string, char *tag, int x){
+    int tamanho = strlen(string);
+    if (tamanho < x) return 0;
+    char aux[1000];
+    int acc = 0;
+    for (int p = x; string[p] != '\0'; p++, acc++){
+        aux[acc] = string[p];
+    }
+    aux[acc] = '\0';
+    for (int p = 0; tag[p] != '\0'; p++, x++){
+        string[x] = tag[p];
+    }
+    for (int p = 0; aux[p] != '\0'; p++, x++){
+        string[x] = aux[p];
+    }
+    string[x] = '\0';
+    return 1;
+}
+
+// Encontrar as possições corretas das novas tags e coloca-las num array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Copiar os tempos das tags para um array
 
 
 int string_to_int (char *string){
@@ -78,7 +100,6 @@ int string_to_int (char *string){
     }
     return acc;
 }
-
 
 void copy_times_from_tag(char *string, int start, int end, int times[], int *N){
     char tempo[5], aux[1000];
@@ -93,7 +114,6 @@ void copy_times_from_tag(char *string, int start, int end, int times[], int *N){
     strcpy(aux,&(string[end+1]));
     strcpy(string,aux);
 }
-
 
 void copy_all_times(char *string, int times[], int *N){
     while(found_indice(string) != -1){

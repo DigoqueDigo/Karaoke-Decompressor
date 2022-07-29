@@ -13,7 +13,11 @@ int found_next(char *string, int x);
 
 void puxa_atras(char *string, int inicio);
 
+void remove_dialogue(char *string);
+
 void clean_string(char *string);
+
+int insere_tag(char *string, char *tag, int x);
 
 int string_to_int (char *string);
 

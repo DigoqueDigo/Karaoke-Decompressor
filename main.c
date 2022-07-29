@@ -16,13 +16,10 @@ void print_times(int times[], int N){
 
 int main(){
     char string[1000];
-    /*int times[100], *N = malloc(sizeof(int));
-    
-    *N = 0;*/
     if (fgets(string, 1000, stdin) != NULL){
         clean_string(string);
-        printf("->%s<-\n", string);
     }
+    printf("->%s<-\n", string);
     
 
 

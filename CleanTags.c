@@ -40,6 +40,26 @@ void clean_string(char *string){
 }
 
 
+void puxa_atras(char *string, int inicio){
+    for (; string[inicio] != '\0'; inicio++){
+        string[inicio] = string[inicio+1];
+    }
+    string[inicio] = '\0';
+}
+
+void final_clean(char *string){
+    clean_string(string);
+    for (int acc = 0; acc < 9;){
+        if (string[0] == ',') acc++;
+        puxa_atras(string,0);
+    }
+}
+
+
+
+// Tempos
+
+
 int string_to_int (char *string){
     int acc = 0, n = strlen(string)-1;
     for (int p = 0; string[p] != '\0'; p++, n--){
@@ -72,3 +92,5 @@ void copy_all_times(char *string, int times[], int *N){
         copy_times_from_tag(string,inicio,fim,times,N);
     }
 }
+
+

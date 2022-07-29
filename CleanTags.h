@@ -49,5 +49,8 @@ void copy_times_from_tag(char *string, int start, int end, int times[], int *N);
 
 void copy_all_times(char *string, int times[], int *N);
 
+void puxa_atras(char *string, int inicio);
+
+void final_clean(char *string);
 
 #endif

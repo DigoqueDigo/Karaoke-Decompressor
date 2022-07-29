@@ -29,16 +29,19 @@ void puxa_atras(char *string, int inicio){
 }
 
 void remove_dialogue(char *string){
+    int i;
     for (int p = 0; p < 9;){
         if (string[0] == ',') p++;
         puxa_atras(string,0);
     }
+    for (i = 0; string[i] != '\n'; i++);
+    string[i] = '\0';
 }
 
 
 void clean_string(char *string){
     int p;
-    remove_dialogue(string);
+    if (string[0] == 'D') remove_dialogue(string);
     for (p = 0; string[p] != '\n' && string[p] != '\0';){
         if (string[p] == '{'){
             while (string[p] != '}'){
@@ -73,24 +76,8 @@ int insere_tag(char *string, char *tag, int x){
     return 1;
 }
 
-// Encontrar as possições corretas das novas tags e coloca-las num array
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Copiar os tempos das tags para um array
-
 
 int string_to_int (char *string){
     int acc = 0, n = strlen(string)-1;

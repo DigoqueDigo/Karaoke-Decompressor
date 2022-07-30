@@ -5,6 +5,7 @@
 #include "CleanTags.h"
 #include "Tempo.h"
 #include "Position.h"
+#include "Style.h"
 
 
 void print_array(int array[], int N){
@@ -15,18 +16,28 @@ void print_array(int array[], int N){
     }
 }
 
+void print_estilos(ESTILO lista[], int N){
+    for (int p = 0; p < N; p++){
+        printf("Estilo ->%s<-\n", lista[p].estilo);
+        printf("Cor principal ->%s<-\n", lista[p].cor_principal);
+        printf("Cor secundária ->%s<-\n\n\n", lista[p].cor_secundaria);
+    }
+}
 
 
 int main(){
-    char string[1000];
-    int array[100], *N = malloc(sizeof(int));
+    char string[1000] = "&H00FFFFFF";
+    int *N = malloc(sizeof(int));
     *N = 0;
-    if (fgets(string, 1000, stdin) != NULL){
-        remove_dialogue(string);
-        printf("->%s<-\n\n\n", string);
-        copy_position(string,array,N);
-        print_array(array,*N);
+    ESTILO lista[30];
+    while (fgets(string, 1000, stdin) != NULL){
+        copia_estilo(string,lista,N);
     }
+    print_estilos(lista,*N);
+
+    correcao_cores(lista,*N);
+    
+    print_estilos(lista,*N);
     
 
 

@@ -28,3 +28,23 @@ void soma_tempo(char *string, int x){
         }
     }
 }
+
+
+void found_times(char *string, char *star_time, char *end_time){
+    if (string[0] != 'D') return;
+    int p, i;
+    for (p = 0; string[p] != ','; p++);
+    p++;
+    for (i = 0; string[p] != ','; p++, i++){
+        star_time[i] = string[p];
+    }
+    star_time[i] = '\0';
+    p++;
+    for (i = 0; string[p] != ','; p++, i++){
+        end_time[i] = string[p];
+    }
+    end_time[i] = '\0';
+}
+
+
+// dont need a replace times in string, causa i already have creat line

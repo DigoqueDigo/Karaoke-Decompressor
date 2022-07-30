@@ -8,6 +8,8 @@
 #include "Style.h"
 
 
+// Imprime um array
+
 void print_array(int array[], int N){
     printf("elementos: %d\n", N);
     for (int p = 0; p < N; p++){
@@ -15,6 +17,8 @@ void print_array(int array[], int N){
         else printf("%d -> ", array[p]);
     }
 }
+
+// Imprime o array dos estilos
 
 void print_estilos(ESTILO lista[], int N){
     for (int p = 0; p < N; p++){
@@ -24,21 +28,37 @@ void print_estilos(ESTILO lista[], int N){
     }
 }
 
+// Imprime as linhas de output (lista ligada) 
+
+void print_final_lines(LINHA lista){
+    for (; lista != NULL; lista = lista->prox){
+        printf("->%s<-\n", lista->line);
+    }
+}
+
 
 int main(){
-    char string[1000] = "&H00FFFFFF";
+    LINHA *final_lines = malloc(sizeof(8));
+    /*char string[10000] = "&H00FFFFFF";
     int *N = malloc(sizeof(int));
     *N = 0;
-    ESTILO lista[30];
-    while (fgets(string, 1000, stdin) != NULL){
-        copia_estilo(string,lista,N);
-    }
-    print_estilos(lista,*N);
+    ESTILO lista[50];
+    while (fgets(string, 10000, stdin) != NULL){
 
-    correcao_cores(lista,*N);
+        // Copiar todos os estilos para o array dos estilos
+
+        if (strstr(string,"Style") != NULL){
+            copia_estilo(string,lista,N);
+            correcao_cores(lista,*N);
+        }
+
+
+    } 
     
     print_estilos(lista,*N);
-    
+    */
+
+
 
 
     return 0;

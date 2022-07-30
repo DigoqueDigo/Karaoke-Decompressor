@@ -31,7 +31,7 @@ void prefixo_sufixo_principal(char *string){
     char aux[40];
     int tamanho;
     strcpy(aux,string);
-    string[0] = '{'; string[1] = '\\'; string[2] = '1'; string[3] = 'c'; string[4] = '\0';
+    string[0] = '{'; string[1] = '\\'; string[2] = 'c'; string[3] = '\0';
     strcat(string,aux);
     tamanho = strlen(string);
     string[tamanho++] = '}'; string[tamanho] = '\0';
@@ -50,7 +50,31 @@ void prefixo_sufixo_secundaria(char *string){
 
 void correcao_cores(ESTILO lista[], int N){
     for (int p = 0; p < N; p++){
-        prefixo_sufixo_principal(lista[p].cor_principal);
-        prefixo_sufixo_secundaria(lista[p].cor_secundaria);
+        if (lista[p].cor_principal[0] != '{'){
+            prefixo_sufixo_principal(lista[p].cor_principal);
+            prefixo_sufixo_secundaria(lista[p].cor_secundaria);
+        }
     }
+}
+
+
+void creat_line(char *line, char *etilo, char *strat_time, char *end_time, char *content){
+    line[0] = '\0';
+    strcat(line,"Dialogue: 0,");
+    strcat(line,strat_time);
+    strcat(line,",");
+    strcat(line,end_time);
+    strcat(line,",");
+    strcat(line,etilo);
+    strcat(line,",,0,0,0,,");
+    strcat(line,content);
+}
+
+
+void push(LINHA *final_list, char *string){
+    LINHA new = malloc(sizeof(struct linha));
+    strcpy(new->line,string);
+    new->prox = NULL;
+    for (; *final_list != NULL; final_list = &((*final_list)->prox));
+    *final_list = new;
 }

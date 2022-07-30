@@ -12,6 +12,8 @@ void soma_tempos_lista(int times[], int N);
 
 void soma_tempo(char *string, int x);
 
+void found_times(char *string, char *star_time, char *end_time);
+
 
 
 #endif

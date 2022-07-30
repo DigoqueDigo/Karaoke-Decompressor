@@ -28,6 +28,24 @@ void print_estilos(ESTILO lista[], int N){
     }
 }
 
+
+void print_worker(WORKER base){
+    printf("estilo: ->%s<-\n", base.estilo);
+    printf("Cp: ->%s<-\n", base.cor_p);
+    printf("Cs: ->%s<-\n", base.cor_s);
+    printf("T_i: ->%s<-\n", base.tempo_inicial);
+    printf("T_f: ->%s<-\n", base.tempo_final);
+    printf("T_a: ->%s<-\n", base.tempo_atual);
+    printf("N_t ->%s<-\n", base.content);
+    for (int p = 0; p < *(base.N_tempos); p++) printf("%d -> ", base.tempos[p]);
+    putchar('\n');
+    printf("T: %d\n", *(base.N_tempos));
+    for (int p = 0; p < *(base.N_posicoes); p++) printf("%d -> ", base.posicoes[p]);
+    putchar('\n');
+    printf("P: %d\n", *(base.N_posicoes));
+}
+
+
 // Imprime as linhas de output (lista ligada) 
 
 void print_final_lines(LINHA lista){
@@ -38,26 +56,39 @@ void print_final_lines(LINHA lista){
 
 
 int main(){
-    LINHA *final_lines = malloc(sizeof(8));
-    /*char string[10000] = "&H00FFFFFF";
-    int *N = malloc(sizeof(int));
-    *N = 0;
+    //LINHA *final_lines = malloc(sizeof(8));
+    WORKER base;
+    char string[10000];
+    int *N_lista = malloc(sizeof(int));
+    *N_lista = 0;
     ESTILO lista[50];
     while (fgets(string, 10000, stdin) != NULL){
 
         // Copiar todos os estilos para o array dos estilos
 
         if (strstr(string,"Style") != NULL){
-            copia_estilo(string,lista,N);
-            correcao_cores(lista,*N);
+            copia_estilo(string,lista,N_lista);
+            correcao_cores(lista,*N_lista);
         }
 
 
-    } 
+        if (strstr(string,"Dialogue") != NULL){
+            //found_times(string,init,last);
+            init_worker(&base,string,lista,*N_lista);
+        }
+    }
+   // printf("init: ->%s<-\n", init);
+   // printf("last: ->%s<-\n", last);
     
-    print_estilos(lista,*N);
-    */
+    print_worker(base);
 
+   /* creat_line(line,base.estilo,base.tempo_inicial,base.tempo_final,base.content);
+
+    push(final_lines,line);
+
+    print_final_lines(*final_lines);*/
+
+    
 
 
 

@@ -102,6 +102,8 @@ void copy_times_from_tag(char *string, int start, int end, int times[], int *N){
     strcpy(string,aux);
 }
 
+// Funciona com Dialogue
+
 void copy_all_times(char *string, int times[], int *N){
     while(found_indice(string) != -1){
         int inicio = found_indice(string);

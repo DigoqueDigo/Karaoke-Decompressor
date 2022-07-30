@@ -59,6 +59,8 @@ Dialogue: 0,0:23:24.75,0:23:29.77,END_JP,,0,0,0,,{\k31}{\blur0.7}ho{\k25}n{\k51}
 Dialogue: 0,0:23:29.77,0:23:36.61,END_JP,,0,0,0,,{\k3}{\fad(0,522)\blur0.7}i{\k47}tsu{\k27}ka {\k51}ki{\k54}tto {\k48}mi{\k56}tsu{\k52}ke{\k52}te{\k93}ne {\k38}na{\k26}n{\k52}te{\k85}ne
 
 
+Dialogue: 0,0:23:29.77,0:23:36.61,END_JP,,0,0,0,,{\k3}{\fad(0,522)\blur0.7}i{\k47}tsu{\k27}ka {\k51}ki{\k54}tto {\k48}mi{\k56}tsu{\k52}ke{\k52}te{\k93}ne {\k38}na{\k26}n{\k52}te{\k85}neDialogue: 0,0:23:29.77,0:23:36.61,END_JP,,0,0,0,,{\k3}{\fad(0,522)\blur0.7}i{\k47}tsu{\k27}ka {\k51}ki{\k54}tto {\k48}mi{\k56}tsu{\k52}ke{\k52}te{\k93}ne {\k38}na{\k26}n{\k52}te{\k85}neDialogue: 0,0:23:29.77,0:23:36.61,END_JP,,0,0,0,,{\k3}{\fad(0,522)\blur0.7}i{\k47}tsu{\k27}ka {\k51}ki{\k54}tto {\k48}mi{\k56}tsu{\k52}ke{\k52}te{\k93}ne {\k38}na{\k26}n{\k52}te{\k85}neDialogue: 0,0:23:29.77,0:23:36.61,END_JP,,0,0,0,,{\k3}{\fad(0,522)\blur0.7}i{\k47}tsu{\k27}ka {\k51}ki{\k54}tto {\k48}mi{\k56}tsu{\k52}ke{\k52}te{\k93}ne {\k38}na{\k26}n{\k52}te{\k85}neDialogue: 0,0:23:29.77,0:23:36.61,END_JP,,0,0,0,,{\k3}{\fad(0,522)\blur0.7}i{\k47}tsu{\k27}ka {\k51}ki{\k54}tto {\k48}mi{\k56}tsu{\k52}ke{\k52}te{\k93}ne {\k38}na{\k26}n{\k52}te{\k85}neDialogue: 0,0:23:29.77,0:23:36.61,END_JP,,0,0,0,,{\k3}{\fad(0,522)\blur0.7
+
 
 
 

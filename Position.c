@@ -5,7 +5,7 @@
 #include "Position.h"
 #include "CleanTags.h"
 
-
+// É para usar sem Dialogue
 
 void copy_position(char *string, int array[], int *N){
     int ant, acc; // fornece indicações sobre as chavetas 1 -> abertas 0 -> fechadas

@@ -40,22 +40,12 @@ void prefixo_sufixo_principal(char *string){
     string[tamanho++] = '}'; string[tamanho] = '\0';
 }
 
-void prefixo_sufixo_secundaria(char *string){
-    char aux[40];
-    int tamanho;
-    strcpy(aux,string);
-    string[0] = '{'; string[1] = '\\'; string[2] = '2'; string[3] = 'c'; string[4] = '\0';
-    strcat(string,aux);
-    tamanho = strlen(string);
-    string[tamanho++] = '}'; string[tamanho] = '\0';
-}
-
 
 void correcao_cores(ESTILO lista[], int N){
     for (int p = 0; p < N; p++){
         if (lista[p].cor_principal[0] != '{'){
             prefixo_sufixo_principal(lista[p].cor_principal);
-            prefixo_sufixo_secundaria(lista[p].cor_secundaria);
+            prefixo_sufixo_principal(lista[p].cor_secundaria);
         }
     }
 }

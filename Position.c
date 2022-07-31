@@ -22,4 +22,8 @@ void copy_position(char *string, int array[], int *N){
     }
     array[*N] = acc;
     ++*N;
+    for (int p = 0; p < *N-1; p++){
+        array[p] = array[p+1];
+    }
+    --*N;
 }

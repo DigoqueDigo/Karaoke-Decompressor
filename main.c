@@ -79,6 +79,8 @@ int main(){
             simple_mode(final_lines,base);
         }
     }
+
+
    // printf("init: ->%s<-\n", init);
    // printf("last: ->%s<-\n", last);
     

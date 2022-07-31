@@ -40,8 +40,6 @@ void copia_estilo(char *string, ESTILO lista[], int *N);
 
 void prefixo_sufixo_principal(char *string);
 
-void prefixo_sufixo_secundaria(char *string);
-
 void correcao_cores(ESTILO lista[], int N);
 
 void creat_line(char *line, char *etilo, char *strat_time, char *end_time, char *content);

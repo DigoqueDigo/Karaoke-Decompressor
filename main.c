@@ -57,7 +57,7 @@ void print_final_lines(LINHA lista){
 
 
 int main(){
-    LINHA *final_lines = malloc(sizeof(8));
+    LINHA *final_lines = malloc(sizeof(8)), temp;
     WORKER base;
     char string[10000];
     int *N_lista = malloc(sizeof(int));
@@ -92,6 +92,12 @@ int main(){
 
     print_final_lines(*final_lines);
 
+
+    while(*final_lines != NULL){
+        temp = *final_lines;
+        final_lines = &((*final_lines)->prox);
+        free(temp);
+    }
     
 
 

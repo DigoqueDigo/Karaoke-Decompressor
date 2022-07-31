@@ -18,8 +18,6 @@ void simple_mode(LINHA *output_list, WORKER base){
 
         soma_tempo(base.tempo_atual,base.tempos[p]);
         insere_tag(aux_content,base.cor_s,base.posicoes[p]);
-        insere_tag(aux_content,base.cor_p,0);
-
 
         creat_line(line,base.estilo,base.tempo_inicial,base.tempo_atual,aux_content);
         

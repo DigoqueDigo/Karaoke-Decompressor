@@ -23,38 +23,38 @@ Style: Default,FreeMono,100,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0,0,0,,{\an5}{\k33}O{\k33}L{\k67}A {\k33}M{\k33}E{\k34}U{\k67}S {\k67}AM{\k33}I{\k34}GO{\k26}S{\k22}{\k18}{\k0}
-Dialogue: 0,0:00:05.00,0:00:08.00,Default,,0,0,0,,{\an5}{\k8}{\k28}C{\k30}OMO{\k17} {\k66}É Q{\k17}U{\k50}E E{\k17}S{\k67}TÃO
-Dialogue: 0,0:00:08.00,0:00:11.00,Default,,0,0,0,,{\an5}{\k53}CO{\k19}MIG{\k28}O {\k43}EST{\k43}Á {\k28}TU{\k43}DO {\k13}BE{\k30}M{\k0}
-Dialogue: 0,0:00:11.00,0:00:14.00,Default,,0,0,0,,{\an5}{\k150}CH{\k150}AU
-Dialogue: 0,0:00:00.00,0:00:00.33,Default,,0,0,0,,{\c&H00FFFFFF}O{\c&H000000FF}LA MEUS AMIGOS
-Dialogue: 0,0:00:00.33,0:00:00.66,Default,,0,0,0,,{\c&H00FFFFFF}OL{\c&H000000FF}A MEUS AMIGOS
-Dialogue: 0,0:00:00.66,0:00:01.33,Default,,0,0,0,,{\c&H00FFFFFF}OLA {\c&H000000FF}MEUS AMIGOS
-Dialogue: 0,0:00:01.33,0:00:01.66,Default,,0,0,0,,{\c&H00FFFFFF}OLA M{\c&H000000FF}EUS AMIGOS
-Dialogue: 0,0:00:01.66,0:00:01.99,Default,,0,0,0,,{\c&H00FFFFFF}OLA ME{\c&H000000FF}US AMIGOS
-Dialogue: 0,0:00:01.99,0:00:02.33,Default,,0,0,0,,{\c&H00FFFFFF}OLA MEU{\c&H000000FF}S AMIGOS
-Dialogue: 0,0:00:02.33,0:00:03.00,Default,,0,0,0,,{\c&H00FFFFFF}OLA MEUS {\c&H000000FF}AMIGOS
-Dialogue: 0,0:00:03.00,0:00:03.67,Default,,0,0,0,,{\c&H00FFFFFF}OLA MEUS AM{\c&H000000FF}IGOS
-Dialogue: 0,0:00:03.67,0:00:04.00,Default,,0,0,0,,{\c&H00FFFFFF}OLA MEUS AMI{\c&H000000FF}GOS
-Dialogue: 0,0:00:04.00,0:00:04.34,Default,,0,0,0,,{\c&H00FFFFFF}OLA MEUS AMIGO{\c&H000000FF}S
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0,0,0,,{\k33}O{\k33}L{\k67}A {\k33}M{\k33}E{\k34}U{\k67}S {\k67}AM{\k33}I{\k34}GO{\k26}S{\k22}{\k18}{\k0}
+Dialogue: 0,0:00:05.00,0:00:08.00,Default,,0,0,0,,{\k8}{\k28}C{\k30}OMO{\k17} {\k66}É Q{\k17}U{\k50}E E{\k17}S{\k67}TÃO
+Dialogue: 0,0:00:08.00,0:00:11.00,Default,,0,0,0,,{\k53}CO{\k19}MIG{\k28}O {\k43}EST{\k43}Á {\k28}TU{\k43}DO {\k13}BE{\k30}M{\k0}
+Dialogue: 0,0:00:11.00,0:00:14.00,Default,,0,0,0,,{\k150}CH{\k150}AU
+Dialogue: 0,0:00:00.00,0:00:00.33,Default,,0,0,0,,O{\c&H000000FF}LA MEUS AMIGOS
+Dialogue: 0,0:00:00.33,0:00:00.66,Default,,0,0,0,,OL{\c&H000000FF}A MEUS AMIGOS
+Dialogue: 0,0:00:00.66,0:00:01.33,Default,,0,0,0,,OLA {\c&H000000FF}MEUS AMIGOS
+Dialogue: 0,0:00:01.33,0:00:01.66,Default,,0,0,0,,OLA M{\c&H000000FF}EUS AMIGOS
+Dialogue: 0,0:00:01.66,0:00:01.99,Default,,0,0,0,,OLA ME{\c&H000000FF}US AMIGOS
+Dialogue: 0,0:00:01.99,0:00:02.33,Default,,0,0,0,,OLA MEU{\c&H000000FF}S AMIGOS
+Dialogue: 0,0:00:02.33,0:00:03.00,Default,,0,0,0,,OLA MEUS {\c&H000000FF}AMIGOS
+Dialogue: 0,0:00:03.00,0:00:03.67,Default,,0,0,0,,OLA MEUS AM{\c&H000000FF}IGOS
+Dialogue: 0,0:00:03.67,0:00:04.00,Default,,0,0,0,,OLA MEUS AMI{\c&H000000FF}GOS
+Dialogue: 0,0:00:04.00,0:00:04.34,Default,,0,0,0,,OLA MEUS AMIGO{\c&H000000FF}S
 Dialogue: 0,0:00:04.34,0:00:05.00,Default,,0,0,0,,OLA MEUS AMIGOS
-Dialogue: 0,0:00:05.00,0:00:05.08,Default,,0,0,0,,{\c&H00FFFFFF}{\c&H000000FF}COMO É QUE ESTÃO
-Dialogue: 0,0:00:05.08,0:00:05.36,Default,,0,0,0,,{\c&H00FFFFFF}C{\c&H000000FF}OMO É QUE ESTÃO
-Dialogue: 0,0:00:05.36,0:00:05.66,Default,,0,0,0,,{\c&H00FFFFFF}COMO{\c&H000000FF} É QUE ESTÃO
-Dialogue: 0,0:00:05.66,0:00:05.83,Default,,0,0,0,,{\c&H00FFFFFF}COMO {\c&H000000FF}É QUE ESTÃO
-Dialogue: 0,0:00:05.83,0:00:06.49,Default,,0,0,0,,{\c&H00FFFFFF}COMO É Q{\c&H000000FF}UE ESTÃO
-Dialogue: 0,0:00:06.49,0:00:06.66,Default,,0,0,0,,{\c&H00FFFFFF}COMO É QU{\c&H000000FF}E ESTÃO
-Dialogue: 0,0:00:06.66,0:00:07.16,Default,,0,0,0,,{\c&H00FFFFFF}COMO É QUE E{\c&H000000FF}STÃO
-Dialogue: 0,0:00:07.16,0:00:07.33,Default,,0,0,0,,{\c&H00FFFFFF}COMO É QUE ES{\c&H000000FF}TÃO
+Dialogue: 0,0:00:05.00,0:00:05.08,Default,,0,0,0,,{\c&H000000FF}COMO É QUE ESTÃO
+Dialogue: 0,0:00:05.08,0:00:05.36,Default,,0,0,0,,C{\c&H000000FF}OMO É QUE ESTÃO
+Dialogue: 0,0:00:05.36,0:00:05.66,Default,,0,0,0,,COMO{\c&H000000FF} É QUE ESTÃO
+Dialogue: 0,0:00:05.66,0:00:05.83,Default,,0,0,0,,COMO {\c&H000000FF}É QUE ESTÃO
+Dialogue: 0,0:00:05.83,0:00:06.49,Default,,0,0,0,,COMO É Q{\c&H000000FF}UE ESTÃO
+Dialogue: 0,0:00:06.49,0:00:06.66,Default,,0,0,0,,COMO É QU{\c&H000000FF}E ESTÃO
+Dialogue: 0,0:00:06.66,0:00:07.16,Default,,0,0,0,,COMO É QUE E{\c&H000000FF}STÃO
+Dialogue: 0,0:00:07.16,0:00:07.33,Default,,0,0,0,,COMO É QUE ES{\c&H000000FF}TÃO
 Dialogue: 0,0:00:07.33,0:00:08.00,Default,,0,0,0,,COMO É QUE ESTÃO
-Dialogue: 0,0:00:08.00,0:00:08.53,Default,,0,0,0,,{\c&H00FFFFFF}CO{\c&H000000FF}MIGO ESTÁ TUDO BEM
-Dialogue: 0,0:00:08.53,0:00:08.72,Default,,0,0,0,,{\c&H00FFFFFF}COMIG{\c&H000000FF}O ESTÁ TUDO BEM
-Dialogue: 0,0:00:08.72,0:00:09.00,Default,,0,0,0,,{\c&H00FFFFFF}COMIGO {\c&H000000FF}ESTÁ TUDO BEM
-Dialogue: 0,0:00:09.00,0:00:09.43,Default,,0,0,0,,{\c&H00FFFFFF}COMIGO EST{\c&H000000FF}Á TUDO BEM
-Dialogue: 0,0:00:09.43,0:00:09.86,Default,,0,0,0,,{\c&H00FFFFFF}COMIGO ESTÁ {\c&H000000FF}TUDO BEM
-Dialogue: 0,0:00:09.86,0:00:10.14,Default,,0,0,0,,{\c&H00FFFFFF}COMIGO ESTÁ TU{\c&H000000FF}DO BEM
-Dialogue: 0,0:00:10.14,0:00:10.57,Default,,0,0,0,,{\c&H00FFFFFF}COMIGO ESTÁ TUDO {\c&H000000FF}BEM
-Dialogue: 0,0:00:10.57,0:00:10.70,Default,,0,0,0,,{\c&H00FFFFFF}COMIGO ESTÁ TUDO BE{\c&H000000FF}M
+Dialogue: 0,0:00:08.00,0:00:08.53,Default,,0,0,0,,CO{\c&H000000FF}MIGO ESTÁ TUDO BEM
+Dialogue: 0,0:00:08.53,0:00:08.72,Default,,0,0,0,,COMIG{\c&H000000FF}O ESTÁ TUDO BEM
+Dialogue: 0,0:00:08.72,0:00:09.00,Default,,0,0,0,,COMIGO {\c&H000000FF}ESTÁ TUDO BEM
+Dialogue: 0,0:00:09.00,0:00:09.43,Default,,0,0,0,,COMIGO EST{\c&H000000FF}Á TUDO BEM
+Dialogue: 0,0:00:09.43,0:00:09.86,Default,,0,0,0,,COMIGO ESTÁ {\c&H000000FF}TUDO BEM
+Dialogue: 0,0:00:09.86,0:00:10.14,Default,,0,0,0,,COMIGO ESTÁ TU{\c&H000000FF}DO BEM
+Dialogue: 0,0:00:10.14,0:00:10.57,Default,,0,0,0,,COMIGO ESTÁ TUDO {\c&H000000FF}BEM
+Dialogue: 0,0:00:10.57,0:00:10.70,Default,,0,0,0,,COMIGO ESTÁ TUDO BE{\c&H000000FF}M
 Dialogue: 0,0:00:10.70,0:00:11.00,Default,,0,0,0,,COMIGO ESTÁ TUDO BEM
-Dialogue: 0,0:00:11.00,0:00:12.50,Default,,0,0,0,,{\c&H00FFFFFF}CH{\c&H000000FF}AU
+Dialogue: 0,0:00:11.00,0:00:12.50,Default,,0,0,0,,CH{\c&H000000FF}AU
 Dialogue: 0,0:00:12.50,0:00:14.00,Default,,0,0,0,,CHAU

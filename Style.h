@@ -3,7 +3,7 @@
 #pragma once
 
 /**
-\file CleanTags.h
+\file Style.h
 \brief Funções relativas aos estilos
 */
 

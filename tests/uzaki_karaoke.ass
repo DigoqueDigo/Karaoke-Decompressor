@@ -33,7 +33,7 @@ Style: título_3,Arial,80,&H00000000,&H000000FF,&H00FFFFFF,&H00000000,-1,0,0,0,1
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:53.03,0:00:57.12,END_JP,,0,0,0,,{\k53}{\k33}ho{\k30}n{\k22}to {\k52}wa {\k16}sa{\k47}so{\k24}tte {\k11}ho{\k28}shi{\k21}i {\k21}na{\k20}n{\k31}te
 Dialogue: 0,0:00:57.12,0:01:00.91,OP_JP,,0,0,0,,{\k28}{\k16}o{\k21}mo{\k16}tte{\k25}mo {\k18}nan{\k14}ka{\k13}na{\k35}i {\k19}so{\k8}n{\k15}na{\k13}ko{\k28}to {\k13}ma{\k10}n{\k11}za{\k26}ra {\k16}zen{\k20}zen {\k9}na{\k2}i{\k3}su
-Dialogue: 0,0:01:00.91,0:01:02.45,OP_JP,,0,0,0,,{\k14}{\blur1.5}u{\k10}za{\k11}ga{\k15}ra{\k12}mi {\k11}so{\k11}re{\k11}mo {\k14}hi{\k9}to{\k14}tsu{\k22}no
+Dialogue: 0,0:01:00.91,0:01:02.45,OP_JP,,0,0,0,,{\k14}u{\k10}za{\k11}ga{\k15}ra{\k12}mi {\k11}so{\k11}re{\k11}mo {\k14}hi{\k9}to{\k14}tsu{\k22}no
 Dialogue: 0,0:01:02.45,0:01:04.37,OP_JP,,0,0,0,,{\fad(0,290)}{\k16}{\k10}{\blur1.5}na{\k11}da{\k8}me{\k10}su{\k8}ka{\k15}shi {\k11}ne{\k10}go{\k17}ti{\k31}a{\k13}ti{\k32}on
 Dialogue: 0,0:01:07.17,0:01:10.21,OP_JP,,0,0,0,,{\k23}{\k15}kyo{\k9}u {\k11}no {\k12}yo{\k23}te{\k13}i {\k13}ki{\k8}i{\k14}te{\k16}a{\k22}ge{\k25}te{\k12}ru {\k18}no{\k30}ni {\k21}nan {\k19}nan
 Dialogue: 0,0:01:10.21,0:01:13.30,OP_JP,,0,0,0,,{\k21}na{\k8}n{\k12}su{\k39}ka {\k40}so{\k40}re {\k19}(na{\k10}n{\k13}su{\k25}ka {\k47}so{\k35}re)

@@ -6,6 +6,7 @@
 #include "Tempo.h"
 #include "Position.h"
 #include "Style.h"
+#include "SimpleMode.h"
 
 
 // Imprime um array
@@ -50,13 +51,13 @@ void print_worker(WORKER base){
 
 void print_final_lines(LINHA lista){
     for (; lista != NULL; lista = lista->prox){
-        printf("->%s<-\n", lista->line);
+        printf("%s\n", lista->line);
     }
 }
 
 
 int main(){
-    //LINHA *final_lines = malloc(sizeof(8));
+    LINHA *final_lines = malloc(sizeof(8));
     WORKER base;
     char string[10000];
     int *N_lista = malloc(sizeof(int));
@@ -75,18 +76,19 @@ int main(){
         if (strstr(string,"Dialogue") != NULL){
             //found_times(string,init,last);
             init_worker(&base,string,lista,*N_lista);
+            simple_mode(final_lines,base);
         }
     }
    // printf("init: ->%s<-\n", init);
    // printf("last: ->%s<-\n", last);
     
-    print_worker(base);
+   // print_worker(base);
 
-   /* creat_line(line,base.estilo,base.tempo_inicial,base.tempo_final,base.content);
+   // creat_line(line,base.estilo,base.tempo_inicial,base.tempo_final,base.content);
 
-    push(final_lines,line);
+   // push(final_lines,line);
 
-    print_final_lines(*final_lines);*/
+    print_final_lines(*final_lines);
 
     
 

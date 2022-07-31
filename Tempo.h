@@ -3,7 +3,7 @@
 #pragma once
 
 /**
-\file CleanTags.h
+\file Tempo.h
 \brief Funções relativas ao tempo das linhas
 */
 

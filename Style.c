@@ -5,6 +5,7 @@
 #include "CleanTags.h"
 #include "Tempo.h"
 #include "Position.h"
+#include "SimpleMode.h"
 
 
 void copia_estilo(char *string, ESTILO lista[], int *N){

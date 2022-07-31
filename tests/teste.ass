@@ -6,36 +6,55 @@ ScriptType: v4.00+
 WrapStyle: 0
 ScaledBorderAndShadow: yes
 YCbCr Matrix: None
+PlayResX: 1920
+PlayResY: 1080
 
 [Aegisub Project Garbage]
-Audio File: Fansub/Aniyome wa Ijippari 01.mkv
+Audio File: ../../../../Transferências/20. Repeat And Repeat ▸▸「Fruits Basket 」Original Soundtrack OST [Disc 1]-128.mp4
+Video File: ?dummy:23.976000:40000:1920:1080:47:163:254:
+Video AR Value: 1.777778
+Video Zoom Percent: 0.375000
 Active Line: 3
+Video Position: 264
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: Default,FreeMono,100,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,4,0,2,10,10,10,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0,0,0,,{\k24}o{\k24}l{\k47}a {\k24}m{\k24}e{\k24}u{\k47}s {\k24}c{\k24}a{\k24}r{\k24}o{\k47}s {\k48}am{\k47}ig{\k24}o{\k24}s
-Dialogue: 0,0:00:05.00,0:00:07.00,Default,,0,0,0,,{\k33}co{\k11}m{\k23}o {\k33}e {\k22}qu{\k22}e {\k11}e{\k11}s{\k11}t{\k23}a{\k11}o
-Dialogue: 0,0:00:07.00,0:00:09.00,Default,,0,0,0,,{\k10}c{\k19}om{\k28}igo{\k0}{\k0}{\k0}{\k29} es{\k38}tá {\k28}tud{\k19}o {\k19}be{\k10}m{\k0}{\k0}{\k0}{\k0}{\k0}
-Dialogue: 0,0:00:09.00,0:00:11.00,Default,,0,0,0,,{\k130}e {\k4}c{\k7}o{\k9}n{\k33}vos{\k17}co{\k0}
-Dialogue: 0,0:00:11.00,0:00:13.00,Default,,0,0,0,,
-
-
-
-
-ola meus caros amigos
-
-como é que estão
-
-comigo está tudo bem
-
-e convosco
-
-
-
-void copy_all_times(char *string, int times[], int *N) -> copia todos os tempos de uma linha (segunda) para uma lista
-
-void clean_string(char *string) -> encontra a fase original a partir de uma linha (segunda)
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0,0,0,,{\an5}{\k33}O{\k33}L{\k67}A {\k33}M{\k33}E{\k34}U{\k67}S {\k67}AM{\k33}I{\k34}GO{\k26}S{\k22}{\k18}{\k0}
+Dialogue: 0,0:00:05.00,0:00:08.00,Default,,0,0,0,,{\an5}{\k8}{\k28}C{\k30}OMO{\k17} {\k66}É Q{\k17}U{\k50}E E{\k17}S{\k67}TÃO
+Dialogue: 0,0:00:08.00,0:00:11.00,Default,,0,0,0,,{\an5}{\k53}CO{\k19}MIG{\k28}O {\k43}EST{\k43}Á {\k28}TU{\k43}DO {\k13}BE{\k30}M{\k0}
+Dialogue: 0,0:00:11.00,0:00:14.00,Default,,0,0,0,,{\an5}{\k150}CH{\k150}AU
+Dialogue: 0,0:00:00.00,0:00:00.33,Default,,0,0,0,,{\c&H00FFFFFF}O{\c&H000000FF}LA MEUS AMIGOS
+Dialogue: 0,0:00:00.33,0:00:00.66,Default,,0,0,0,,{\c&H00FFFFFF}OL{\c&H000000FF}A MEUS AMIGOS
+Dialogue: 0,0:00:00.66,0:00:01.33,Default,,0,0,0,,{\c&H00FFFFFF}OLA {\c&H000000FF}MEUS AMIGOS
+Dialogue: 0,0:00:01.33,0:00:01.66,Default,,0,0,0,,{\c&H00FFFFFF}OLA M{\c&H000000FF}EUS AMIGOS
+Dialogue: 0,0:00:01.66,0:00:01.99,Default,,0,0,0,,{\c&H00FFFFFF}OLA ME{\c&H000000FF}US AMIGOS
+Dialogue: 0,0:00:01.99,0:00:02.33,Default,,0,0,0,,{\c&H00FFFFFF}OLA MEU{\c&H000000FF}S AMIGOS
+Dialogue: 0,0:00:02.33,0:00:03.00,Default,,0,0,0,,{\c&H00FFFFFF}OLA MEUS {\c&H000000FF}AMIGOS
+Dialogue: 0,0:00:03.00,0:00:03.67,Default,,0,0,0,,{\c&H00FFFFFF}OLA MEUS AM{\c&H000000FF}IGOS
+Dialogue: 0,0:00:03.67,0:00:04.00,Default,,0,0,0,,{\c&H00FFFFFF}OLA MEUS AMI{\c&H000000FF}GOS
+Dialogue: 0,0:00:04.00,0:00:04.34,Default,,0,0,0,,{\c&H00FFFFFF}OLA MEUS AMIGO{\c&H000000FF}S
+Dialogue: 0,0:00:04.34,0:00:05.00,Default,,0,0,0,,OLA MEUS AMIGOS
+Dialogue: 0,0:00:05.00,0:00:05.08,Default,,0,0,0,,{\c&H00FFFFFF}{\c&H000000FF}COMO É QUE ESTÃO
+Dialogue: 0,0:00:05.08,0:00:05.36,Default,,0,0,0,,{\c&H00FFFFFF}C{\c&H000000FF}OMO É QUE ESTÃO
+Dialogue: 0,0:00:05.36,0:00:05.66,Default,,0,0,0,,{\c&H00FFFFFF}COMO{\c&H000000FF} É QUE ESTÃO
+Dialogue: 0,0:00:05.66,0:00:05.83,Default,,0,0,0,,{\c&H00FFFFFF}COMO {\c&H000000FF}É QUE ESTÃO
+Dialogue: 0,0:00:05.83,0:00:06.49,Default,,0,0,0,,{\c&H00FFFFFF}COMO É Q{\c&H000000FF}UE ESTÃO
+Dialogue: 0,0:00:06.49,0:00:06.66,Default,,0,0,0,,{\c&H00FFFFFF}COMO É QU{\c&H000000FF}E ESTÃO
+Dialogue: 0,0:00:06.66,0:00:07.16,Default,,0,0,0,,{\c&H00FFFFFF}COMO É QUE E{\c&H000000FF}STÃO
+Dialogue: 0,0:00:07.16,0:00:07.33,Default,,0,0,0,,{\c&H00FFFFFF}COMO É QUE ES{\c&H000000FF}TÃO
+Dialogue: 0,0:00:07.33,0:00:08.00,Default,,0,0,0,,COMO É QUE ESTÃO
+Dialogue: 0,0:00:08.00,0:00:08.53,Default,,0,0,0,,{\c&H00FFFFFF}CO{\c&H000000FF}MIGO ESTÁ TUDO BEM
+Dialogue: 0,0:00:08.53,0:00:08.72,Default,,0,0,0,,{\c&H00FFFFFF}COMIG{\c&H000000FF}O ESTÁ TUDO BEM
+Dialogue: 0,0:00:08.72,0:00:09.00,Default,,0,0,0,,{\c&H00FFFFFF}COMIGO {\c&H000000FF}ESTÁ TUDO BEM
+Dialogue: 0,0:00:09.00,0:00:09.43,Default,,0,0,0,,{\c&H00FFFFFF}COMIGO EST{\c&H000000FF}Á TUDO BEM
+Dialogue: 0,0:00:09.43,0:00:09.86,Default,,0,0,0,,{\c&H00FFFFFF}COMIGO ESTÁ {\c&H000000FF}TUDO BEM
+Dialogue: 0,0:00:09.86,0:00:10.14,Default,,0,0,0,,{\c&H00FFFFFF}COMIGO ESTÁ TU{\c&H000000FF}DO BEM
+Dialogue: 0,0:00:10.14,0:00:10.57,Default,,0,0,0,,{\c&H00FFFFFF}COMIGO ESTÁ TUDO {\c&H000000FF}BEM
+Dialogue: 0,0:00:10.57,0:00:10.70,Default,,0,0,0,,{\c&H00FFFFFF}COMIGO ESTÁ TUDO BE{\c&H000000FF}M
+Dialogue: 0,0:00:10.70,0:00:11.00,Default,,0,0,0,,COMIGO ESTÁ TUDO BEM
+Dialogue: 0,0:00:11.00,0:00:12.50,Default,,0,0,0,,{\c&H00FFFFFF}CH{\c&H000000FF}AU
+Dialogue: 0,0:00:12.50,0:00:14.00,Default,,0,0,0,,CHAU

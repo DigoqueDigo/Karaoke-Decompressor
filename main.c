@@ -31,22 +31,6 @@ void print_estilos(ESTILO lista[], int N){
 }
 
 
-void print_worker(WORKER base){
-    printf("estilo: ->%s<-\n", base.estilo);
-    printf("Cp: ->%s<-\n", base.cor_p);
-    printf("Cs: ->%s<-\n", base.cor_s);
-    printf("T_i: ->%s<-\n", base.tempo_inicial);
-    printf("T_f: ->%s<-\n", base.tempo_final);
-    printf("T_a: ->%s<-\n", base.tempo_atual);
-    printf("N_t ->%s<-\n", base.content);
-    for (int p = 0; p < *(base.N_tempos); p++) printf("%d -> ", base.tempos[p]);
-    putchar('\n');
-    printf("T: %d\n", *(base.N_tempos));
-    for (int p = 0; p < *(base.N_posicoes); p++) printf("%d -> ", base.posicoes[p]);
-    putchar('\n');
-    printf("P: %d\n", *(base.N_posicoes));
-}
-
 
 // Imprime as linhas de output (lista ligada) 
 
@@ -62,25 +46,26 @@ void print_estilos_advanced(LINK_ESTILOS lista){
     }
 }
 
-void print_tempos_advanced(LINK_TEMPOS lista){
-    for (; lista != NULL; lista = lista->prox){
-        printf("tempos ->%s<-\n", lista->tempo);
+void print_tempos_advanced(TEMPOS lista[], int N){
+    for (int p = 0; p < N; p++){
+        printf("tempos ->%s<-\n", lista[p].tempo);
     }
 }
 
 
 int main(){
     int array[10];// posições dos estilos
-    LINK_TEMPOS *link_tempos = malloc(8);
+    TEMPOS lista_tempos[50];
     LINK_ESTILOS *link_estilos = malloc(8);
     LINHA *final_lines = malloc(sizeof(8)), temp;
     WORKER base;
     char string[10000];
     int *N_lista = malloc(sizeof(int));
-    int *indice = malloc(8);
-    *N_lista = *indice = 0;
+    int *indice_posicoes = malloc(8);
+    int *indice_tempos = malloc(8);
+    *N_lista = *indice_posicoes = *indice_tempos = 0;
     ESTILO lista[50];
-    recolhe_data(link_estilos,link_tempos,3);
+    recolhe_data(link_estilos,lista_tempos,3);
     while (fgets(string, 10000, stdin) != NULL){
 
         // Copiar todos os estilos para o array dos estilos
@@ -93,17 +78,19 @@ int main(){
         else if (strstr(string,"Dialogue") != NULL){
             //found_times(string,init,last);
             init_worker(&base,string,lista,*N_lista);
-            advanced_mode(final_lines,base,*link_tempos,lista,array,indice);
+            advanced_mode(final_lines,base,lista_tempos,lista,array,indice_posicoes,indice_tempos,3);
         }
 
         else posicoes_estilos(link_estilos,lista,array,*N_lista);
     }
 
-   // print_estilos(lista,*N_lista);
-   // print_estilos_advanced(*link_estilos);
-   // posicoes_estilos(link_estilos,lista,array,7);
+    print_estilos(lista,*N_lista);
+    print_estilos_advanced(*link_estilos);
 
     print_array(array,4);
+    print_tempos_advanced(lista_tempos,3);
+
+
    // posicoes_estilos(estilos,lista,array,*N_lista);
    // for (int p = 0; p < 4; p++) printf("P: %d\n", array[p]);
 
@@ -127,7 +114,6 @@ int main(){
 
    // print_estilos_advanced(*estilos);
    // print_tempos_advanced(*tempos);
-
 
 
 

@@ -7,6 +7,7 @@
 #include "Position.h"
 #include "Style.h"
 #include "SimpleMode.h"
+#include "AdvancedMode.h"
 
 
 // Imprime um array
@@ -55,10 +56,26 @@ void print_final_lines(LINHA lista){
     }
 }
 
+void print_estilos_advanced(LINK_ESTILOS lista){
+    for (; lista != NULL; lista = lista->prox){
+        printf("estilo ->%s<-\n", lista->estilo);
+    }
+}
+
+void print_tempos_advanced(LINK_TEMPOS lista){
+    for (; lista != NULL; lista = lista->prox){
+        printf("tempos ->%s<-\n", lista->tempo);
+    }
+}
+
 
 int main(){
-    LINHA *final_lines = malloc(sizeof(8)), temp;
-    WORKER base;
+    int array[10];
+    LINK_TEMPOS *tempos = malloc(8);
+    LINK_ESTILOS *estilos = malloc(8);
+    recolhe_data(estilos,tempos,3);
+   // LINHA *final_lines = malloc(sizeof(8)), temp;
+   // WORKER base;
     char string[10000];
     int *N_lista = malloc(sizeof(int));
     *N_lista = 0;
@@ -72,14 +89,19 @@ int main(){
             correcao_cores(lista,*N_lista);
         }
 
-
+/*
         if (strstr(string,"Dialogue") != NULL){
             //found_times(string,init,last);
             init_worker(&base,string,lista,*N_lista);
             simple_mode(final_lines,base);
-        }
+        }*/
     }
 
+    print_estilos(lista,*N_lista);
+    print_estilos_advanced(*estilos);
+
+    posicoes_estilos(estilos,lista,array,*N_lista);
+    for (int p = 0; p < 4; p++) printf("P: %d\n", array[p]);
 
    // printf("init: ->%s<-\n", init);
    // printf("last: ->%s<-\n", last);
@@ -90,15 +112,22 @@ int main(){
 
    // push(final_lines,line);
 
-    print_final_lines(*final_lines);
+   // print_final_lines(*final_lines);
 
 
-    while(*final_lines != NULL){
-        temp = *final_lines;
-        final_lines = &((*final_lines)->prox);
-        free(temp);
-    }
+   // while(*final_lines != NULL){
+   //     temp = *final_lines;
+   //     final_lines = &((*final_lines)->prox);
+   //     free(temp);
+   // }
     
+
+   // print_estilos_advanced(*estilos);
+   // print_tempos_advanced(*tempos);
+
+
+
+
 
 
 

@@ -70,16 +70,17 @@ void print_tempos_advanced(LINK_TEMPOS lista){
 
 
 int main(){
-    int array[10];
-    LINK_TEMPOS *tempos = malloc(8);
-    LINK_ESTILOS *estilos = malloc(8);
-    recolhe_data(estilos,tempos,3);
-   // LINHA *final_lines = malloc(sizeof(8)), temp;
-   // WORKER base;
+    int array[10];// posições dos estilos
+    LINK_TEMPOS *link_tempos = malloc(8);
+    LINK_ESTILOS *link_estilos = malloc(8);
+    LINHA *final_lines = malloc(sizeof(8)), temp;
+    WORKER base;
     char string[10000];
     int *N_lista = malloc(sizeof(int));
-    *N_lista = 0;
+    int *indice = malloc(8);
+    *N_lista = *indice = 0;
     ESTILO lista[50];
+    recolhe_data(link_estilos,link_tempos,3);
     while (fgets(string, 10000, stdin) != NULL){
 
         // Copiar todos os estilos para o array dos estilos
@@ -89,19 +90,22 @@ int main(){
             correcao_cores(lista,*N_lista);
         }
 
-/*
-        if (strstr(string,"Dialogue") != NULL){
+        else if (strstr(string,"Dialogue") != NULL){
             //found_times(string,init,last);
             init_worker(&base,string,lista,*N_lista);
-            simple_mode(final_lines,base);
-        }*/
+            advanced_mode(final_lines,base,*link_tempos,lista,array,indice);
+        }
+
+        else posicoes_estilos(link_estilos,lista,array,*N_lista);
     }
 
-    print_estilos(lista,*N_lista);
-    print_estilos_advanced(*estilos);
+   // print_estilos(lista,*N_lista);
+   // print_estilos_advanced(*link_estilos);
+   // posicoes_estilos(link_estilos,lista,array,7);
 
-    posicoes_estilos(estilos,lista,array,*N_lista);
-    for (int p = 0; p < 4; p++) printf("P: %d\n", array[p]);
+    print_array(array,4);
+   // posicoes_estilos(estilos,lista,array,*N_lista);
+   // for (int p = 0; p < 4; p++) printf("P: %d\n", array[p]);
 
    // printf("init: ->%s<-\n", init);
    // printf("last: ->%s<-\n", last);
@@ -112,15 +116,14 @@ int main(){
 
    // push(final_lines,line);
 
-   // print_final_lines(*final_lines);
+    print_final_lines(*final_lines);
 
 
-   // while(*final_lines != NULL){
-   //     temp = *final_lines;
-   //     final_lines = &((*final_lines)->prox);
-   //     free(temp);
-   // }
-    
+    while(*final_lines != NULL){
+        temp = *final_lines;
+        final_lines = &((*final_lines)->prox);
+        free(temp);
+    }
 
    // print_estilos_advanced(*estilos);
    // print_tempos_advanced(*tempos);

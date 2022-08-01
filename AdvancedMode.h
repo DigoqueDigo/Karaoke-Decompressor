@@ -28,4 +28,8 @@ int recolhe_data(LINK_ESTILOS *lista_estilos, LINK_TEMPOS *lista_tempos, int N);
 
 void posicoes_estilos(LINK_ESTILOS *lista_estilos, ESTILO lista[], int vetor[], int N_lista);
 
+void replace_worker(WORKER *base, ESTILO estilo);
+
+void advanced_mode(LINHA *output, WORKER base, LINK_TEMPOS tempos, ESTILO lista[], int vetor[], int *indice);
+
 #endif

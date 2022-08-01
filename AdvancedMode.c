@@ -37,7 +37,7 @@ int recolhe_data(LINK_ESTILOS *lista_estilos, LINK_TEMPOS *lista_tempos, int N){
         if (scanf("%s", aux) != 1) return -1;
         push_tempo(lista_tempos,aux);
     }
-    printf("Indica a ordem correta dos estilos (um por linha)\n");
+  //  printf("Indica a ordem correta dos estilos (um por linha)\n");
     for (int p = 0; p <= N; p++){
         if (scanf("%s", aux) != 1) return -1;
         push_estilo(lista_estilos,aux);
@@ -53,3 +53,83 @@ void posicoes_estilos(LINK_ESTILOS *lista_estilos, ESTILO lista[], int vetor[], 
         vetor[N++] = p;
     }
 }
+
+void replace_worker(WORKER *base, ESTILO estilo){
+    strcpy(base->estilo,estilo.estilo);
+    strcpy(base->cor_p,estilo.cor_principal);
+    strcpy(base->cor_s,estilo.cor_secundaria);
+}
+
+
+// vetor :: array com as posições corretas
+// indice :: indice do vetor das posiçoes
+
+void advanced_mode(LINHA *output, WORKER base, LINK_TEMPOS tempos, ESTILO lista[], int vetor[], int *indice){
+    int ant = 0;
+    char line[1000], aux_content[500], aux_tempo[50];
+    strcpy(aux_content,base.content);
+    strcpy(aux_tempo,base.tempo_inicial);
+    soma_tempo(aux_tempo,base.tempos[0]);
+    replace_worker(&base,lista[vetor[*indice]]);
+    for (int p = 0; p < *(base.N_posicoes); strcpy(aux_content,base.content), strcpy(base.tempo_inicial,base.tempo_atual)){
+
+        
+        if (ant == 0) soma_tempo(aux_tempo,base.tempos[p]);
+        
+        
+        
+        if (tempos != NULL && strcmp(aux_tempo,tempos->tempo) > 0 && ant == 0){
+            strcpy(base.tempo_atual,tempos->tempo);
+
+            replace_worker(&base,lista[vetor[*indice]]);
+
+            ++*indice;
+
+            insere_tag(aux_content,base.cor_s,base.posicoes[p]);
+            creat_line(line,base.estilo,base.tempo_inicial,base.tempo_atual,aux_content);
+            push(output,line);
+            tempos = tempos->prox;
+            ant = 1;
+
+        }
+
+        else if (tempos != NULL && ant == 1){
+            if (strcmp(aux_tempo,tempos->tempo) > 0){
+                strcpy(base.tempo_atual,tempos->tempo);
+                tempos = tempos->prox;
+                replace_worker(&base,lista[vetor[*indice]]);
+                ++*indice;
+                insere_tag(aux_content,base.cor_s,base.posicoes[p]);
+                creat_line(line,base.estilo,base.tempo_inicial,base.tempo_atual,aux_content);
+                push(output,line);
+
+            }
+            else{
+                strcpy(base.tempo_atual,aux_tempo);
+                insere_tag(aux_content,base.cor_s,base.posicoes[p]);
+                creat_line(line,base.estilo,base.tempo_inicial,base.tempo_atual,aux_content);
+                push(output,line);
+                p++;
+                ant = 0;
+            }
+        }
+
+
+        else{
+            soma_tempo(base.tempo_atual,base.tempos[p]);
+            insere_tag(aux_content,base.cor_s,base.posicoes[p]);
+
+            creat_line(line,base.estilo,base.tempo_inicial,base.tempo_atual,aux_content);
+
+            push(output,line);
+            soma_tempo(base.tempo_inicial,base.tempos[p]);
+            p++;
+            ant = 0;
+        }
+
+    }
+
+    creat_line(line,base.estilo,base.tempo_atual,base.tempo_final,aux_content);
+    push(output,line);
+    printf("indice: %d\n", *indice);
+}  

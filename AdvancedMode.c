@@ -87,37 +87,47 @@ void advanced_mode(LINHA *output, WORKER base, TEMPOS tempos[], ESTILO lista[], 
     char line[1000], aux_content[500], aux_tempo[50];
     strcpy(aux_content,base.content);
     strcpy(aux_tempo,base.tempo_inicial);
-    print_worker(base);
+  //  print_worker(base);
     replace_worker(&base,lista[vetor[*indice_posicoes++]]);
-    print_worker(base);
-    for (int p = 0; p < *(base.N_posicoes); strcpy(aux_content,base.content), strcpy(base.tempo_inicial,base.tempo_atual), p++){
-        
+  //  print_worker(base);
+    for (int p = 0; p < *(base.N_posicoes); strcpy(aux_content,base.content), strcpy(base.tempo_inicial,base.tempo_atual), p++){ 
+
         soma_tempo(aux_tempo,base.tempos[p]);
-        printf("aux_tempo:::::::: ->%s<-\n\n\n", aux_tempo);
+     // printf("aux_tempo:::::::: ->%s<-\n", aux_tempo);
         replace_worker(&base,lista[vetor[*indice_posicoes]]);
-        int a = strcmp(aux_tempo,tempos[*indice_tempos].tempo);
 
+       // printf("tempos: %d\n\n\n", *indice_tempos);
         
-        if (*indice_tempos < N && a > 0){
-            
-            
-            strcpy(base.tempo_atual,tempos[*indice_tempos].tempo);
-            ++*indice_tempos;
-            ++*indice_posicoes;
-            
-            
-            insere_tag(aux_content,base.cor_s,base.posicoes[p]);
-            creat_line(line,base.estilo,base.tempo_inicial,base.tempo_atual,aux_content);
-            push(output,line);
-            strcpy(aux_content,base.content);
+        if (*indice_tempos < N && strcmp(aux_tempo,tempos[*indice_tempos].tempo) > 0){
 
+            for (; *indice_tempos < N && strcmp(aux_tempo,tempos[*indice_tempos].tempo) > 0; strcpy(aux_content,base.content), strcpy(base.tempo_inicial,base.tempo_atual), ++*indice_tempos, ++*indice_posicoes){
+            
+                strcpy(base.tempo_atual,tempos[*indice_tempos].tempo);
+                replace_worker(&base,lista[vetor[*indice_posicoes]]);
+                
+              //  ++*indice_posicoes;
+              //  ++*indice_tempos;
+                
+            
+              //  printf("SSSSSSSSSSSSSSSSSSSSSSSSSS\n");
+                insere_tag(aux_content,base.cor_s,base.posicoes[p]);
+                creat_line(line,base.estilo,base.tempo_inicial,base.tempo_atual,aux_content);
+                push(output,line);
+                
+                
+              //  strcpy(aux_content,base.content);
+              //  strcpy(base.tempo_inicial,base.tempo_atual);
 
-            strcpy(base.tempo_inicial,base.tempo_atual);
+            }
+
+          //  strcpy(base.tempo_inicial,base.tempo_atual);
             strcpy(base.tempo_atual,aux_tempo);
             replace_worker(&base,lista[vetor[*indice_posicoes]]);
             insere_tag(aux_content,base.cor_s,base.posicoes[p]);
             creat_line(line,base.estilo,base.tempo_inicial,base.tempo_atual,aux_content);
             push(output,line);
+           // ++*indice_tempos;
+
         }
 
         else{
@@ -135,4 +145,5 @@ void advanced_mode(LINHA *output, WORKER base, TEMPOS tempos[], ESTILO lista[], 
     }
     creat_line(line,base.estilo,base.tempo_atual,base.tempo_final,aux_content);
     push(output,line);
+   // printf("posições: %d\n", *indice_posicoes);
 }

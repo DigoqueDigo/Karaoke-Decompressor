@@ -84,11 +84,11 @@ int main(){
         else posicoes_estilos(link_estilos,lista,array,*N_lista);
     }
 
-    print_estilos(lista,*N_lista);
-    print_estilos_advanced(*link_estilos);
+  //  print_estilos(lista,*N_lista);
+  //  print_estilos_advanced(*link_estilos);
 
-    print_array(array,4);
-    print_tempos_advanced(lista_tempos,3);
+  //  print_array(array,4);
+  //  print_tempos_advanced(lista_tempos,3);
 
 
    // posicoes_estilos(estilos,lista,array,*N_lista);

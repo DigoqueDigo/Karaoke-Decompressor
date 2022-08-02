@@ -31,8 +31,6 @@ int main(){
 
     if (modo == 1){
 
-        printf("\nInsere as linhas dos estilos e as de karaoke respetivamente\n\n");
-
         while (fgets(string, 10000, stdin) != NULL){
 
             if (strstr(string,"Style") != NULL){
@@ -48,6 +46,9 @@ int main(){
     }
 
     else if (modo == 2){
+
+        printf("\nQuantos cortes no tempo vais efetuar: ");
+        if (scanf("%d", &modo) != 1) return -1;
 
         recolhe_data(link_estilos,lista_tempos,modo);
 

@@ -33,11 +33,12 @@ int recolhe_data(LINK_ESTILOS *lista_estilos, TEMPOS lista_tempos[], int N){
         if (scanf("%s", aux) != 1) return -1;
         push_tempo(lista_tempos,aux,p);
     }
-    printf("\nIndica a ordem sequencial dos estilos (um por linha)\n");
+    printf("\nIndica a ordem sequencial dos estilos (um por linha)\n\n");
     for (int p = 0; p <= N; p++){
         if (scanf("%s", aux) != 1) return -1;
         push_estilo(lista_estilos,aux);
     }
+    printf("\nInsere as linhas dos estilos e as de karaoke respetivamente\n\n");
     return 0;
 }
 

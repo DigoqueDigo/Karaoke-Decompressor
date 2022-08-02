@@ -53,7 +53,7 @@ Tempo da mudança de estilo:
 
 0:00:55.00
 
-output:
+Linhas resultantes:
 
 Dialogue: 0,0:00:53.03,0:00:53.56,OP_JP,,0,0,0,,{\c&H00838385}honto wa sasotte hoshii nante
 Dialogue: 0,0:00:53.56,0:00:53.89,OP_JP,,0,0,0,,ho{\c&H00838385}nto wa sasotte hoshii nante

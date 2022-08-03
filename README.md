@@ -1,6 +1,6 @@
 # Karaoke Decompressor - Aegisub
 
-O Karaoke-Decompressor é um script capaz de "descomprimir" várias linhas de karaoke criadas pelo [Aegisub](https://github.com/Ristellise/AegisubDC), as linhas resultantes das "descompressão" variam conforme o modo escolhido.
+O Karaoke Decompressor é um script capaz de "descomprimir" várias linhas de karaoke criadas pelo [Aegisub](https://github.com/Ristellise/AegisubDC), as linhas resultantes da "descompressão" variam conforme o modo escolhido.
 
 ## Modo Simples
 
@@ -90,5 +90,6 @@ Para perceber melhor a utilização do script aconselho a visualização de duas
 
 - Compilar ```$ make script```
 - Executar ```$ make run```
-- Limpar ```$ make clean```
+- Remover código objeto ```$ make clean_object```
 - Documentação ```$ make doc```
+- Remover documentação ```make clean_doc```

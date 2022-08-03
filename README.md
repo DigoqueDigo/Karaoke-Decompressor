@@ -84,9 +84,11 @@ Para perceber melhor a utilização do script aconselho a visualização de duas
 - Ao inserir os tempos no Modo Avançado, estes devem estar por ordem.
 - Não é possível colocar um tempo de mudança que esteja fora do karaoke, ou seja, no exemplo anterior não seria possível colocar um tempo igual a 0:00:30.00.
 - Têm de colocar todos os dados relativos aos estilos que serão utilizados no karaoke.
+- As linhas de karaoke apenas podem possuir uma tag, neste caso, ```\k```
 
-## Compilar e executar
-```bash
-$ gcc -Wall -Wextra -pedantic-errors -O2 *.c -lm -o script
-$ ./script
-```
+## Comandos
+
+- Compilar ```$ make script```
+- Executar ```$ make run```
+- Limpar ```$ make clean```
+- Documentação ```$ make doc```

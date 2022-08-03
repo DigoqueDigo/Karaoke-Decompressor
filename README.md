@@ -92,4 +92,4 @@ Para perceber melhor a utilização do script aconselho a visualização de duas
 - Executar ```$ make run```
 - Remover código objeto ```$ make clean_object```
 - Documentação ```$ make doc```
-- Remover documentação ```make clean_doc```
+- Remover documentação ```$ make clean_doc```

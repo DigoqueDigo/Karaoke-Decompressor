@@ -2,17 +2,8 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+#include "CleanTags.h"
 #include "Tempo.h"
-
-// time exemple -> 0:00:00.00
-
-void soma_tempos_lista(int times[], int N){
-    int acc = 0;
-    for (int p = 0; p < N; p++){
-        acc += times[p];
-        times[p] = acc;
-    }
-}
 
 
 void soma_tempo(char *string, int x){
@@ -47,4 +38,25 @@ void found_times(char *string, char *star_time, char *end_time){
 }
 
 
-// dont need a replace times in string, causa i already have creat line
+void copy_times_from_tag(char *string, int start, int end, int times[], int *N){
+    char tempo[5], aux[1000];
+    int p = 0, acc;
+    for (start = start+3; start != end; start++, p++){
+        tempo[p] = string[start];
+    }
+    tempo[p] = '\0';
+    acc = string_to_int(tempo);
+    times[*N] = acc;
+    ++*N;
+    strcpy(aux,&(string[end+1]));
+    strcpy(string,aux);
+}
+
+
+void copy_all_times(char *string, int times[], int *N){
+    while(found_indice(string) != -1){
+        int inicio = found_indice(string);
+        int fim = found_next(string,inicio);
+        copy_times_from_tag(string,inicio,fim,times,N);
+    }
+}

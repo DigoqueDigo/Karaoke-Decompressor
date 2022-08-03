@@ -87,27 +87,3 @@ int string_to_int (char *string){
     }
     return acc;
 }
-
-void copy_times_from_tag(char *string, int start, int end, int times[], int *N){
-    char tempo[5], aux[1000];
-    int p = 0, acc;
-    for (start = start+3; start != end; start++, p++){
-        tempo[p] = string[start];
-    }
-    tempo[p] = '\0';
-    acc = string_to_int(tempo);
-    times[*N] = acc;
-    ++*N;
-    strcpy(aux,&(string[end+1]));
-    strcpy(string,aux);
-}
-
-// Funciona com Dialogue
-
-void copy_all_times(char *string, int times[], int *N){
-    while(found_indice(string) != -1){
-        int inicio = found_indice(string);
-        int fim = found_next(string,inicio);
-        copy_times_from_tag(string,inicio,fim,times,N);
-    }
-}

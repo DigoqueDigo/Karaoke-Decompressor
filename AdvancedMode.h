@@ -3,7 +3,7 @@
 #pragma once
 
 
-/** \mainpage Karaoke Decompressor - Aegisub
+/** \mainpage Documentação
  * 
  * Bem-vindo à página da documentação deste mini projeto, caso queiras compreender
  * melhor como tudo isto funciona está no sítio certo.\n\n
@@ -63,6 +63,7 @@ void push_tempo(TEMPOS lista[], char *string, int indice);
  * @param lista_estilos lista ligada na qual serão armazenados os estilos
  * @param lista_tempos lista na qual serão armazenados os tempos de mudança
  * @param N número de tempos de mudança em causa
+ * @return retorna -1 como codigo de erro, caso tenha conseguido obter a informação desejada retorn 0
  */
 int recolhe_data(LINK_ESTILOS *lista_estilos, TEMPOS lista_tempos[], int N);
 

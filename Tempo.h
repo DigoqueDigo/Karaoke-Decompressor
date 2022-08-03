@@ -2,6 +2,7 @@
 #define TEMPO_H
 #pragma once
 
+
 /**
 \file Tempo.h
 \brief Funções relativas ao tempo das linhas

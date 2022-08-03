@@ -28,5 +28,11 @@ main.o:
 run:
 	./script
 
-clean:
-	rm *.o script
+doc:
+	doxygen Doxyfile
+
+clean_object:
+	rm *.o
+
+clean_doc:
+	rm -r latex/ html/

@@ -1,35 +1,19 @@
-script: AdvancedMode.o CleanTags.o Position.o Printer.o SimpleMode.o Style.o Tempo.o main.o
-	gcc -Wall -Wextra -pedantic-errors -O2 *.c -lm -o script
+CC = gcc
+CFLAGS = -Wall -Wextra -pedantic-errors -O2
+LIBS = -lm
+OBJS = main.o AdvancedMode.o CleanTags.o Position.o Printer.o SimpleMode.o Style.o Tempo.o
+TARGET = script
+DOC_FILE = Doxyfile
 
-AdvancedMode.o:
-	gcc -c AdvancedMode.c
 
-CleanTags.o:
-	gcc -c CleanTags.c
-
-Position.o:
-	gcc -c Position.c
-
-Printer.o:
-	gcc -c Printer.c
-
-SimpleMode.o:
-	gcc -c SimpleMode.c
-
-Style.o:
-	gcc -c Style.c
-
-Tempo.o:
-	gcc -c Tempo.c
-
-main.o:
-	gcc -c main.c
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
 
 run:
-	./script
+	./$(TARGET)
 
 doc:
-	doxygen Doxyfile
+	doxygen $(DOC_FILE)
 
 clean_object:
 	rm *.o

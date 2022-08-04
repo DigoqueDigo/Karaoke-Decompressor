@@ -31,6 +31,8 @@ int main(){
 
     if (modo == 1){
 
+        printf("\nInsere as linhas dos estilos e as de karaoke respetivamente\n\n");
+
         while (fgets(string, 10000, stdin) != NULL){
 
             if (strstr(string,"Style") != NULL){

@@ -15,8 +15,8 @@ run:
 doc:
 	doxygen $(DOC_FILE)
 
-clean_object:
+clean_object: $(TARGET)
 	rm *.o
 
-clean_doc:
+clean_doc: doc
 	rm -r latex/ html/

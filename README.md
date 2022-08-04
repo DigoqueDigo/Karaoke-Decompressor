@@ -4,7 +4,7 @@ O Karaoke Decompressor é um script capaz de "descomprimir" várias linhas de ka
 
 ## Modo Simples
 
-As linhas de karaoke são totalmente “descomprimidas” e os estilos presentes no karaoke são salvaguardados, como é possivel ver no exemplo abaixo apresentado tanto o nome do estilo como a cor secundária foram preservados.
+As linhas de karaoke são totalmente “descomprimidas” e os estilos presentes no karaoke são salvaguardados, como é possivel ver no exemplo abaixo, tanto o nome do estilo como a cor secundária foram preservados.
 
 ```bash
 
@@ -37,7 +37,7 @@ Dialogue: 0,0:00:56.81,0:00:57.12,OP_JP,,0,0,0,,honto wa sasotte hoshii nante
 ## Modo Avançado
 
 Este modo é praticamente igual ao anterior, muda o facto de podermos mudar o estilo de uma linha a meio do karaoke, ou seja, podemos trocar cores, fontes, etc... em plena execução de um karaoke.
-Neste exemplo as linhas resultante são identicas às do exemplo anterior, contudo reprarem que existem uma mudança de estilo num determinado momento que é escolhido pelo utilizador.
+Neste exemplo as linhas resultantes são identicas às do exemplo anterior, contudo reparem que existe uma mudança de estilo num determinado momento que é escolhido pelo utilizador.
 
 ```bash
 Estilos:
@@ -76,13 +76,13 @@ Dialogue: 0,0:00:57.12,0:00:57.12,END_JP,,0,0,0,,honto wa sasotte hoshii nante
 
 Para perceber melhor a utilização do script aconselho a visualização de duas demos, cada uma relativa a um modo diferente.
 
- - [Modo Simples]
- - [Modo Avançado]
+ - [Modo Simples](https://youtu.be/bE7HtWzIgAU)
+ - [Modo Avançado](https://youtu.be/Rg_BNR7yHiw)
 
 ## Notas de utilização
 
 - Ao inserir os tempos no Modo Avançado, estes devem estar por ordem.
-- Não é possível colocar um tempo de mudança que esteja fora do karaoke, ou seja, no exemplo anterior não seria possível colocar um tempo igual a 0:00:30.00.
+- Não é possível colocar um tempo de mudança que esteja fora do karaoke, ou seja, no exemplo anterior não seria possível colocar um tempo igual a ```0:00:30.00```.
 - É necessário colocar todos os dados relativos aos estilos que serão utilizados no karaoke.
 - As linhas de karaoke apenas podem possuir uma tag, neste caso, ```\k```.
 

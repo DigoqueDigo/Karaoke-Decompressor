@@ -93,3 +93,7 @@ Para perceber melhor a utilização do script aconselho a visualização de duas
 - Documentação ```$ make doc```
 - Remover código objeto ```$ make clean_object```
 - Remover documentação ```$ make clean_doc```
+
+## Nota final
+
+Caso desejem que o script altere diretamente o ficheiro ```.ass```, basta removerem a sinalética relativa aos comentários no ficheiro ```main.c```.

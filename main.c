@@ -24,7 +24,17 @@ int main(){
     WORKER base;
     *N_lista = *indice_posicoes = *indice_tempos = 0;
     ESTILO lista[50];
+
+/*
+    FILE *ficheiro;
+    char diretoria[50];
     
+    printf("Indica o nome do ficheiro/diretoria onde as novas linhas serão guardadas, caso o ficheiro não exista, as linhas serão guardadas onde as indicares: ");
+    if (scanf("%s", diretoria) != 1) return -1;
+
+    ficheiro = fopen(diretoria, "a");
+*/
+
     printf("Escolhe um dos seguintes modos:\n\nModo Simples -> 1\nModo Avançado -> 2\n\nOpção: ");
 
     if (scanf("%d", &modo) != 1) return -1;
@@ -74,6 +84,14 @@ int main(){
 
     print_final_lines(*final_lines);
 
+/*
+    for (LINHA aux = *final_lines; aux != NULL; aux = aux->prox){
+        if (aux->prox == NULL) fprintf(ficheiro, "%s", aux->line);
+        else fprintf(ficheiro, "%s\n", aux->line);
+    }
+
+    fclose(ficheiro);
+*/
 
     for (LINHA temp; *final_lines != NULL;){
         temp = *final_lines;
